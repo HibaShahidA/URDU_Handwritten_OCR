@@ -1,0 +1,1 @@
+# URDU_Handwritten_OCR
