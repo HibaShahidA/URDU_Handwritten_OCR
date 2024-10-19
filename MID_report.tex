@@ -1,0 +1,180 @@
+\documentclass[9pt,twocolumn,twoside]{article} %210 mm × 297 mm
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\spanishdecimal{.}
+\usepackage[a4paper,left=1.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{multirow}
+\usepackage{mhchem}
+\usepackage{url}
+\usepackage{subfigure}
+\usepackage{amsfonts,latexsym}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{threeparttable}
+\usepackage{array,colortbl}
+\usepackage{ifpdf}
+\usepackage{rotating}
+\usepackage{cite}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{fancyhdr}
+
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{nccmath}
+
+
+
+\newcommand{\titulo}{URDU Handwritten Optical Character Recognition Development}
+\newcommand{\nombre}{Hiba Shahid, Roozain Qazalbash, Farzam Ghouri, Amnah Qureshi}
+\newcommand{\FCE}{\textbf{CS/CE 316/365 Introduction to Deep Learning}}
+\newcommand{\resumen}{\textbf{{Developing an Urdu Handwritten OCR using Deep Learning Models.}}}
+\vspace{1cm}
+\newcommand{\palabrasclave}{\textbf{Motivation:} Urdu, being a low-resource language, lacks tool for converting handwritten text into digital format. This project aims to create an efficient Urdu Handwritten OCR that can accurately transform handwritten text into digital form. Such a tool is essential for processing information, enabling it to be utilized for various professional, educational and other learning purposes. This effort is driven by the need to empower Urdu and support language accessibility in the digital era.}
+
+
+
+
+
+
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[LO]{\small\nombre}
+\fancyhead[RE]{\small\titulo}
+\fancyhead[LO]{\small\FCE}
+\fancyfoot[RO,LE] {\thepage}
+
+\setcounter{page}{1} 
+
+\begin{document}
+
+\twocolumn[
+\begin{@twocolumnfalse}
+\begin{tabular}{c p{12cm}}
+\multirow{2}{*}{\includegraphics[scale=0.5]{Habib_Logo.jpg}}&{{\Large\bf\titulo}}\\
+\vspace{0.2cm} & \vspace{0.2cm}\\
+ &{\large\nombre}\\
+\vspace{0.1cm} & \vspace{0.1cm}\\ 
+ & {\small\it Introduction to Deep Learning: Fall 2024. Habib University, Karachi.}\\
+{\tiny } &\\
+{\tiny } & {\small\resumen}\\
+&{\small\palabrasclave}\\
+\end{tabular}
+\end{@twocolumnfalse}
+\vspace{0.7cm}
+]
+
+\section{Introduction}
+The OCR (Optical Character Recognition) technology traces its roots back to as early as the $1920$'s. Since the advent of neural networks and advancements in computer vision techniques, it has become one of the most actively and extensively researched areas in deep learning. However, while significant work has been done on script recognition systems of both cursive and non-cursive scripts, research on Urdu text is relatively recent. Despite Urdu's rich cultural heritage and approximately $170$ millions speakers worldwide, development of efficient OCR systems for it have been insufficient. \\
+This setback can be attributed to the lack of resources, two of which we address in our research through the use of comprehensive datasets for model training and the implementation of efficient neural network models. 
+
+\section{Research Question}
+The research question we are addressing is “Transforming Handwritten Urdu Text into Digital Text using Deep Learning.” Our research statement can be summarized as,\\
+\textit{“Given a snippet of handwritten Urdu text, convert it into its corresponding digital representation.”}
+
+In this study, we will explore various deep learning architectures, including Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs), to develop an effective Optical Character Recognition (OCR) system. The input to the model will consist of images of handwritten Urdu text, while the output will be a machine-readable digital text format. This research aims to create a robust solution that captures the unique characteristics of handwritten Urdu, including the cursive nature and contextual forms of its letters.
+
+The primary motivation behind this research is the growing need for digitization of Urdu literature and documents, which are often handwritten. As more people seek to access these texts in a digital format, the challenges proposed by the variations in human handwriting, image noise, and script complexity must be addressed. Current OCR systems for Urdu are limited and often rely on printed text images, which may not perform well with diverse handwriting styles.
+By applying deep learning methodologies, this research seeks to improve the accuracy of recognizing handwritten Urdu, enabling applications in education, archiving, and processing of lowresource languages like URDU. 
+
+\section{Literature Review}	
+
+
+\subsection{Methodology used in the papers}
+    \renewcommand{\tablename}{Table}
+    \begin{table}[ht]
+    \centering
+    \caption{Models used in the Papers}
+    \begin{tabular}{ccc} % ccc means three centered columns
+        \toprule
+        YEAR & OCR Language & DL Model \\ % Header row
+        \midrule
+        2021 \cite{mushtaq21} & URDU & CNN \\ % First row
+        Row 2, Col 1 & Row 2, Col 2 & Row 2, Col 3 \\ % Second row
+        Row 3, Col 1 & Row 3, Col 2 & Row 3, Col 3 \\ % Third row
+        \bottomrule
+    \end{tabular}
+    \label{}
+    \end{table}
+
+\subsection{Models used}
+
+
+\subsection{CNN}
+Describe CNN network how the already established Arbic OCRs use CNNs.
+
+\cite{rizvi2018ocr} %cite the paper we recitefor using CNN
+\cite{mahdi2024ocr} %in case of citing more papers
+%more papers.
+
+\subsection{RNNs}
+Define RNNs who used it \cite{rizvi2018ocr} then as well.
+\footnote{ Add a footnote if you need to define smthng explicitly}.
+
+
+\section{Datasets}
+We have successfully collected around 15000 images of handwritten urdu text, which can be accessed through the following link:\\
+\url{https://github.com/HibaShahidA/URDU_Handwritten_OCR}
+
+Data is the most essential part for designing an Urdu handwritten OCR. It's important for the data to be of good quality and adequate for this purpose. Finding this type of dataset was a major challenge faced by us as there was a lack of such data available online, especially for handwritten images.
+
+We have collected 20,000 images that are handwritten in varying styles and scripts of Urdu. We will use these images for training and testing our model; we have intended to use 10,000 images for training and 10,000 for testing. Two main sources through which we collected our dataset were from kaggle.com and handwritten by ourselves.
+
+\section*{Acquisition}
+The primary source for our dataset collection was Kaggle, from where we got most of our data. It was a challenge to find the data on Kaggle because many of the datasets that were published either had only input or only output. There were datasets that had perfect handwritten input images, but their output as Urdu text was written on Excel sheets that, upon downloading, did not show the Urdu text properly and instead had random special characters written in those tabs. Many of the datasets had digital text form of input and not handwritten, but since these datasets had outputs as text files, we decided to write most of their digital text input by hand ourselves. Other than Kaggle, we also asked family members and friends to write a couple of sentences on paper and send them to us as images every day. Those images were then cropped and used as sentences for input.
+
+Following are the links to our dataset which we took from Kaggle:
+
+\begin{itemize}
+    \item Handwritten Urdu Characters Dataset (kaggle.com)
+    \item PUCIT-OHUL: PUCIT Handwritten Urdu Lines Dataset (kaggle.com)
+    \item Urdu OCR data (kaggle.com)
+    \item 80clean handwritten Urdu OCR lines (kaggle.com)
+    \item UNHD Dataset (kaggle.com)
+\end{itemize}
+
+\section*{Characterization}
+There are a total of 20,000 images consisting of paragraphs, sentences, words, characters, and digits. We have obtained datasets for characters written in different styles for character recognition and also punctuation. All kinds of styles and scripts available in the Urdu language were added to the dataset. Since Urdu letters revolve a lot around dots, it is a common practice to write the dots conjoined. For example, when two dots are written together, it is often represented as a dash. Keeping this in mind, data has been collected for such writing practices as well. We made sure to choose data that is of excellent quality, which means blurry pictures and smudged handwriting were avoided. The output data is in the form of text files where each handwritten image’s data is written.
+
+
+\subsection{Example of our Data}
+Add images and sample font for the data collected so far.
+of 
+\begin{figure}[H]  
+\centering  
+\includegraphics[scale=0.23]{fig} 
+\caption{Caption your image} 
+\label{lvdt4}
+\end{figure}
+
+
+\subsection{Desired Output}
+agdbcbcjun nbvshjsjsjskskskksksksksksk
+
+
+
+
+\section{Conclusion}
+
+Further wwork. What is happening what is left
+
+\newpage
+\renewcommand{\refname}{References}
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+
+
+\end{document}
